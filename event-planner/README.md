@@ -12,3 +12,7 @@ Currently, two official plugins are available:
 You will need to use this command also:
 - npm install react-router-dom
 
+
+In your React frontend, install axios to make API requests for the backend to work:
+
+npm install axios

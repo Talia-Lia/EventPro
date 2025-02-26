@@ -2,18 +2,18 @@ import express from "express";
 import cors from "cors";
 
 const app = express();
-const PORT = process.env.PORT || 51000;
+const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
-// Basic route
-app.get("/", (req, res) => {
-    res.send("Welcome to the Express Backend!");
+// Sample API Route
+app.get("/api/message", (req, res) => {
+  res.json({ message: "Hello from the backend!" });
 });
 
-// Start server
+
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`✅ Server is running on http://localhost:${PORT}`);
 });
