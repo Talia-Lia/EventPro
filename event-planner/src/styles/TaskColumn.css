@@ -1,10 +1,38 @@
+.app_main {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between columns */
+  padding: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.task_column {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .task_column_heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .task_column_icon {
-  width: 30px;
-  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.task_card {
+  width: 100%;
 }
