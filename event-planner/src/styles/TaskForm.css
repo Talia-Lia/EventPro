@@ -1,24 +1,35 @@
 .app_header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #dcdcdc;
+    padding: 20px 0;
 }
 
 .app_header > form {
-    width: 40%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .task_input {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    background: #f9f9f9;
+    background: #fff;
     color: #000;
     border: 1px solid #dfe3e6;
-    border-radius: 5px;
-    padding: 8px 12px;
-    margin-bottom: 15px;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
     width: 100%;
+    transition: 0.2s;
+}
+
+.task_input:focus {
+    border-color: #6457f9;
+    outline: none;
 }
 
 .task_input::placeholder {
@@ -28,6 +39,8 @@
 .task_form_bottom_line {
     display: flex;
     align-items: center;
+    gap: 10px;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -35,10 +48,18 @@
     font-size: 16px;
     font-weight: 500;
     border: 1px solid #999;
-    border-radius: 5px;
-    width: 120px;
+    border-radius: 8px;
+    width: 130px;
     height: 40px;
-    padding: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.task_status:focus {
+    border-color: #6457f9;
+    outline: none;
 }
 
 .task_submit {
@@ -46,10 +67,13 @@
     font-weight: 500;
     background-color: #6457f9;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     height: 40px;
-    padding: 3px 13px;
-    margin-left: 10px;
+    padding: 5px 15px;
     border: none;
     cursor: pointer;
+    transition: background 0.3s;
+}
+.task_submit:hover {
+    background-color: #5243d2;
 }
