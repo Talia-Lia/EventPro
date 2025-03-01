@@ -41,3 +41,20 @@
 .read-the-docs {
   color: #888;
 }
+
+.task_column {
+  width: 33.33%;
+  margin: 20px;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: 150px auto;
+}
+
+
+.app_main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 8%;
+}
