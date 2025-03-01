@@ -16,8 +16,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold">Welcome to Event Planner</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black-100">
+      <h1 className="text-4xl font-bold text-black">Welcome to Event Pro</h1>
       <p className="text-lg mt-4">Backend says: {message}</p>
     </div>
   );

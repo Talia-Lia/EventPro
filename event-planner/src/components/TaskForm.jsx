@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./TaskForm.css";
+import "../styles/TaskForm.css";
 import Tag from "./Tag";
 
 const TaskForm = ({ setTasks }) => {

@@ -1,6 +1,5 @@
 import React from "react";
-
-import "./TaskCard.css";
+import "../styles/TaskCard.css";
 import Tag from "./Tag";
 import deleteIcon from "../assets/delete.png";
 

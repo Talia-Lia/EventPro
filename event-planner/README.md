@@ -16,3 +16,5 @@ You will need to use this command also:
 In your React frontend, install axios to make API requests for the backend to work:
 
 npm install axios
+
+npm install @headlessui/react

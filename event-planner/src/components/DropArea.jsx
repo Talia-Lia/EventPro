@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./DropArea.css";
+import "../styles/DropArea.css";
 
 const DropArea = ({ onDrop }) => {
   const [showDrop, setShowDrop] = useState(false);
@@ -13,7 +13,8 @@ const DropArea = ({ onDrop }) => {
         setShowDrop(false);
       }}
       onDragOver={(e) => e.preventDefault()}
-      className={showDrop ? "hide_drop" : "drop_area"}
+      className={showDrop ? "drop_area" : "hide_drop"}
+
     >
       Drop Here
     </section>

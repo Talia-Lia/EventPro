@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Tag.css";
+import "../styles/Tag.css";
 
 const Tag = ({ tagName, selectTag, selected }) => {
     const tagStyle = {
