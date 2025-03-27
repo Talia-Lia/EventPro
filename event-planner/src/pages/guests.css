@@ -1,0 +1,158 @@
+/* Container & Card */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f7fafc;
+    color: #2d3748;
+    padding: 16px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 480px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  /* Form Groups & Inputs */
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 0px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 4px rgba(66, 153, 225, 0.5);
+  }
+  
+  /* Error Text */
+  .error {
+    color: #e53e3e;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  /* Add Button */
+  .add-btn {
+    width: 100%;
+    background: #4299e1;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .add-btn:hover {
+    background: #3182ce;
+  }
+  
+  /* Guest List */
+  .guest-list {
+    margin-top: 16px;
+  }
+  
+  .empty-text {
+    text-align: center;
+    color: #718096;
+  }
+  
+  /* Guest Item */
+  .guest-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edf2f7;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .guest-info {
+    flex-grow: 1;
+  }
+  
+  .guest-name {
+    font-weight: bold;
+  }
+  
+  .guest-email {
+    font-size: 14px;
+    color: #718096;
+  }
+  
+  /* Emoji Buttons */
+  .status-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .emoji-btn {
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.5;
+  }
+  .emoji-btn:focus,
+  .emoji-btn:active {
+  outline: none;
+  box-shadow: none; 
+  }
+  
+  .emoji-btn:hover {
+    opacity: 1;
+    transform: translateY(-3px); 
+  }
+  
+  .emoji-btn.selected {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: #e53e3e;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .delete-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9); 
+    transform: scale(1.05);
+  }
+  /* Summary */
+  .summary {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #718096;
+  }
+  

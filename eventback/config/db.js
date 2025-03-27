@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import Project from "./models/Project.js";
+
 
 const connectDB = async () => {
 try {
