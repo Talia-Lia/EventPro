@@ -17,7 +17,8 @@ const initialSpendingData = [
   { name: 'Other', spent: 0 },
 ];
 
-const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#A569BD'];
+const colors = ['#0088FE', '#00C49F', '#046307', '#FF8042', '#A569BD'];
+
 
 const Budget = () => {
   const [data, setData] = useState(initialData);
@@ -39,10 +40,10 @@ const Budget = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 p-10">
+    <div className="min-h-screen text-black px-6 py-10">
       <div className="flex flex-col items-center space-y-4">
         <h1 className="text-3xl font-bold">Budget Planner</h1>
-        <p className="text-lg text-gray-600">Track and manage your event budget here.</p>
+        <p className="text-lg text-gray-700">Track and manage your event budget here.</p>
         <PieChart width={400} height={420}>
           <Pie
             dataKey="value"
@@ -83,12 +84,12 @@ const Budget = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-        {/* Edit Budget Section */}
-        <div className="bg-gray-200 rounded-lg p-6 shadow-lg">
-          <h2 className="text-xl font-semibold mb-4 text-gray-700 text-center">Edit Budget</h2>
+
+        <div className="bg-white/30 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+          <h2 className="text-xl font-semibold mb-4 text-center">Edit Budget</h2>
           {data.map((item, index) => (
             <div key={index} className="flex justify-between items-center mb-3">
-              <label className="text-gray-600 font-medium w-1/2">{item.name}:</label>
+              <label className="font-medium w-1/2">{item.name}:</label>
               <input
                 type="number"
                 value={item.value === 0 ? '' : item.value}
@@ -98,7 +99,7 @@ const Budget = () => {
               />
             </div>
           ))}
-          <p className="text-sm text-gray-500 italic text-center mt-2">
+          <p className="text-sm text-gray-700 italic text-center mt-2">
             * Changes are not saved automatically. Click "Apply Changes" to update.
           </p>
           <button className="bg-blue-500 text-white w-full mt-4 py-2 rounded-lg hover:bg-blue-600 transition">
@@ -106,12 +107,12 @@ const Budget = () => {
           </button>
         </div>
 
-        {/* Record Spending Section */}
-        <div className="bg-gray-200 rounded-lg p-6 shadow-lg">
-          <h2 className="text-xl font-semibold mb-4 text-gray-700 text-center">Record Spending</h2>
+       
+        <div className="bg-white/30 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+          <h2 className="text-xl font-semibold mb-4 text-center">Record Spending</h2>
           {spendingData.map((item, index) => (
             <div key={index} className="flex justify-between items-center mb-3">
-              <label className="text-gray-600 font-medium w-1/2">{item.name}:</label>
+              <label className="font-medium w-1/2">{item.name}:</label>
               <input
                 type="number"
                 value={item.spent === 0 ? '' : item.spent}
@@ -121,7 +122,7 @@ const Budget = () => {
               />
             </div>
           ))}
-          <p className="text-sm text-gray-500 italic text-center mt-2">
+          <p className="text-sm text-gray-700 italic text-center mt-2">
             * Changes are not saved automatically. Click "Apply Spending" to update.
           </p>
           <button className="bg-blue-500 text-white w-full mt-4 py-2 rounded-lg hover:bg-blue-600 transition">
@@ -130,10 +131,10 @@ const Budget = () => {
         </div>
       </div>
 
-      {/* Spending vs Budget Summary */}
-      <div className="mt-10 bg-white rounded-lg p-6 shadow-lg">
-        <h2 className="text-xl font-semibold mb-4 text-gray-700 text-center">Spending vs Budget Summary</h2>
-        <table className="w-full text-gray-700">
+     
+      <div className="mt-10 bg-white/30 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+        <h2 className="text-xl font-semibold mb-4 text-center">Spending vs Budget Summary</h2>
+        <table className="w-full">
           <thead>
             <tr>
               <th className="px-2 py-1 border">Category</th>

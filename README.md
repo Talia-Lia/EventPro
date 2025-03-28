@@ -11,3 +11,11 @@ npm install cors
 
 
 
+
+Increment 2 additions
+
+Install:
+
+npm install dotenv
+
+npm install lucide-react

@@ -16,16 +16,18 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #0c0c0d;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
 }
 
+
 body {
+  @apply min-h-screen text-white;
+  background: linear-gradient(to bottom right, #1b4522, #F4C542, #FF8A00);
   margin: 0;
-  background-color: white;
 }
 
 
