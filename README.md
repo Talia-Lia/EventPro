@@ -19,3 +19,5 @@ Install:
 npm install dotenv
 
 npm install lucide-react
+
+npm install firebase
