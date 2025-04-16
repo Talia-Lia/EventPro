@@ -4,9 +4,26 @@ import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
+const getFriendlyLoginError = (code) => {
+  switch (code) {
+    case "auth/user-not-found":
+      return "No account found with this email.";
+    case "auth/wrong-password":
+      return "Incorrect password. Please try again.";
+    case "auth/invalid-email":
+      return "Please enter a valid email address.";
+    case "auth/too-many-requests":
+      return "Too many failed attempts. Try again later.";
+    case "auth/internal-error":
+      return "Something went wrong. Please try again.";
+    default:
+      return "An unexpected error occurred. Try again.";
+  }
+};
+
 const Login = () => {
   const navigate = useNavigate();
-
+  const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,6 +35,7 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       console.error("Error logging in:", error);
+      setError(getFriendlyLoginError(error.code));
     }
   };
 
@@ -78,6 +96,11 @@ const Login = () => {
             }}
           />
         </div>
+        {error && (
+        <p style={{ color: "red", textAlign: "center", marginTop: "10px" }}>
+          {error}
+        </p>
+        )}
 
         <button
           type="submit"
