@@ -6,6 +6,7 @@ import { auth } from "../firebase";
 import { sendEmailVerification } from "firebase/auth";
 
 
+
 const getFriendlyError = (code) => {
   switch (code) {
     case "auth/email-already-in-use":
